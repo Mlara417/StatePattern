@@ -19,38 +19,30 @@ public class StopLight {
 		this.color = lightColor;
 		
 		//setting initial state
-		if(lightColor.equals("Red")) {
+		if(lightColor.equals("RED")) {
 			state = red;
-		} else if(lightColor.equals("Yellow")) {
+		} else if(lightColor.equals("YELLOW")) {
 			state = yellow;
-		} else if(lightColor.equals("Green")) {
+		} else if(lightColor.equals("GREEN")) {
 			state = green;
+		} else {
+			System.out.println("Invalid color");
 		}
 		
 		System.out.println(state);
-		//iterator
-		for(int i = 0; i < 5; i++) {
-			if(state == red) {
-				red.redToGreen();
-			} else if(state == yellow) {
-				yellow.yellowToRed();
-			} else if( state == green) {
-				green.greenToYellow();
-			}
-		}
 	}
 	
 	//state methods initializing
-	public void redToGreen() {
-		state.redToGreen();	
+	public void setGreen() {
+		state.setGreen();	
 	}
 	
-	public void greenToYellow() {
-		state.greenToYellow();	
+	public void setYellow() {
+		state.setYellow();	
 	}
 
-	public void yellowToRed() {
-		state.yellowToRed();	
+	public void setRed() {
+		state.setRed();	
 	}
 	
 	void setState(State state) {
