@@ -1,5 +1,8 @@
 package statePattern;
 
 public interface State {
-	public void doAction(Context context);
+	//setting state actions
+	public void redToGreen();
+	public void greenToYellow();
+	public void yellowToRed();
 }
